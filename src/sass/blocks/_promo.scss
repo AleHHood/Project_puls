@@ -56,3 +56,47 @@
         }
     }    
 }
+
+@media (max-width: 992px)
+    {
+        .promo{
+            &__wrapper{
+                align-items: center;
+            }
+        }
+    }
+
+@media (max-width: 720px)
+    {
+        .promo{
+            &__header{
+                font-size: 35px;
+            }
+            &__subheader{
+                font-size: 20px;
+            }
+        }
+    }
+
+@media (max-width: 540px)
+    {
+        .promo{
+            &__header{
+                font-size: 25px;
+            }
+            &__subheader{
+                font-size: 15px;
+            }
+            &__icons{
+                flex-direction: column;
+                align-items: center;
+                width: 100vw;
+            }
+            &__icon{
+                width: 200px;
+                font-size: 20px;
+                width: 100vw;
+                margin-top: 20px;
+            }
+        }
+    }

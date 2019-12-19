@@ -38,3 +38,22 @@
         align-items: flex-end;
     }
 }
+
+@media (max-width: 720px)
+    {
+        .header{
+            &__official{
+                display: none;
+            }
+        }
+    }
+
+@media (max-width: 540px)
+    {
+        .header{
+            flex-direction: column;
+            &__phone{
+                display: none;
+            }
+        }
+    }
