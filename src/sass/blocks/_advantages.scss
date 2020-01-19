@@ -21,6 +21,11 @@
             display: block;
             margin: 0 auto;
         }
+        .heart{
+            &:hover{
+                animation: heart  1.5s infinite ease-in-out;
+            }
+        }
         span{
             font-size: 18px;
             font-weight: bold;

@@ -1,5 +1,6 @@
 @import 'mixin';
 @import 'variabls';
+@import 'animate.scss';
 
 .container{
     max-width: 950px;
@@ -17,6 +18,8 @@
 @import 'blocks/catalog';
 @import 'blocks/reviews';
 @import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/up';
 
 @media (max-width: 1200px)
     {

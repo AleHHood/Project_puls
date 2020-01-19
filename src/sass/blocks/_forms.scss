@@ -19,11 +19,27 @@
         text-align: left;
         color: #4b4b4b;
     }
+    &_mt25{
+        margin-top: 25px;
+    }
 }
 
 @media (max-width: 720px)
 {
     .feed-form{
         margin: 36px auto 0px;
+    }
+}
+
+@media (max-width: 720px)
+{
+    .feed-form{
+        &_mt25{
+            width: 300px;
+            margin: 50px auto;
+        }
+        input{
+            margin-bottom: 30px;
+        }
     }
 }

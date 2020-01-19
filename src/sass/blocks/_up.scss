@@ -1,0 +1,13 @@
+.up{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    opacity: 0.7;
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+}

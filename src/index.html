@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="/css/slick.min.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="/css/style.min.css">    
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <section class="promo">
+    <section class="promo" id="pageUp">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -28,7 +25,7 @@
                     <div class="header__phone">
                         <a href="tel:+74999228974">+7 (499) 922-89-74</a>
                     </div>
-                <button class="button button_mobile">заказать звонок</button>
+                <button class="button button_mobile" data-model="consultation">заказать звонок</button>
                 </div>
             </header>
             <div class="promo__wrapper">
@@ -51,7 +48,7 @@
                         на все вопросы
                     </div>
                 </div>
-                <button class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
+                <button class="button button_main"  data-model="consultation">заказать кОНСУЛЬТАЦИЮ</button>
                 <div class="promo__link">или <a href="#">или ПЕРЕЙТИ В КАТАЛОГ</a></div>
             </div>
         </div>
@@ -70,7 +67,7 @@
                     соревнованиям по триатлону!
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/header/heart.jpeg" alt="heart">
+                    <img class="heart" src="icons/header/heart.jpeg" alt="heart">
                     <span>Заботимся о здоровье</span>
                     Мы работаем для того, 
                     чтобы Ваши занятия спортом шли на пользу 
@@ -96,21 +93,21 @@
                 по подбору пульсометра 
             </h2>
             <div class="consultation__descrp">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</div>
-            <form action="#" class="feed-form">
-                    <input required type="text" placeholder="Ваше имя" name="name">
-                    <input required type="number" placeholder="Ваш телефон" name="text">
-                    <input required type="email" placeholder="Ваш E-mail" name="email">
-                    <button class="button button_form">заказать кОНСУЛЬТАЦИЮ</button>
+            <form id="consultation-form" action="#" class="feed-form">
+                    <input type="text" placeholder="Ваше имя" name="name">
+                    <input type="tel" placeholder="Ваш телефон" name="phone">
+                    <input type="email" placeholder="Ваш E-mail" name="email">
+                    <button class="button button_form" >заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
     </section>
-    <section class="carousel">
+    <div class="carousel">
         <div class="carousel__inner">
             <div><img src="/icons/polar/polar_main.jpeg" alt=""></div>
             <div><img src="/icons/polar/polar1.png" alt=""></div>
             <div><img src="/icons/polar/polar2.png" alt=""></div>
           </div>
-    </section>
+    </div>
     <section class="catalog">
         <div class="container">
             <h2 class="subheader subheader-catalog">Каталог пульсометров</h2>
@@ -128,13 +125,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -154,13 +153,99 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">4 750 руб.</div>
+                            <div class="catalog-item__new-price">4 500 руб.</div>
+                        </div>
+                        <button class="button button_mini">купить</button>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="icons/polar/polar.png" alt="" class="catalog-item__img">
+                    <div class="catalog-item__subtitle">Пульсометр Polar FT3</div>
+                    <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
+                    <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                         </div>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
+                        <a href="#" class="catalog-item__list_back">Назад</a>
+                    </div>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">4 750 руб.</div>
+                            <div class="catalog-item__new-price">4 500 руб.</div>
+                        </div>
+                        <button class="button button_mini">купить</button>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="icons/polar/polar.png" alt="" class="catalog-item__img">
+                    <div class="catalog-item__subtitle">Пульсометр Polar FT4</div>
+                    <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
+                    <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                         </div>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
+                        <a href="#" class="catalog-item__list_back">Назад</a>
+                    </div>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">4 750 руб.</div>
+                            <div class="catalog-item__new-price">4 500 руб.</div>
+                        </div>
+                        <button class="button button_mini">купить</button>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="icons/polar/polar.png" alt="" class="catalog-item__img">
+                    <div class="catalog-item__subtitle">Пульсометр Polar T1</div>
+                    <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
+                    <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                         </div>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
+                        <a href="#" class="catalog-item__list_back">Назад</a>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -180,91 +265,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
                     </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">купить</button>
-                    </div>
-                </div>
-
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="icons/polar/polar.png" alt="" class="catalog-item__img">
-                    <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                    <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                    <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                         </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                        <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
-                    </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">купить</button>
-                    </div>
-                </div>
-
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="icons/polar/polar.png" alt="" class="catalog-item__img">
-                    <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                    <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                    <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                         </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                        <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
-                    </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">купить</button>
-                    </div>
-                </div>
-
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="icons/polar/polar.png" alt="" class="catalog-item__img">
-                    <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                    <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                    <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                         </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                        <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -285,13 +294,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -311,13 +322,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -337,13 +350,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -364,13 +379,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -390,13 +407,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -416,13 +435,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -442,13 +463,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -468,13 +491,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -494,13 +519,15 @@
                     <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                          </div>
-                    <ul class="catalog-item__list">
-                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    <div class="catalog-item__list">
+                        <ul class="catalog-item__li">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__list_back">Назад</a>
-                    </ul>
+                    </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -518,7 +545,7 @@
     <section class="reviews">
         <div class="container">
             <h2 class="subheader subheader-reviews">отзывы клиентов</h2>
-            <div class="reviews__review">
+            <div class="reviews__review wow fadeInUp" data-wow-duration="1s">
                 <img src="icons/reviews/review1.jpeg" alt="" class="reviews__img">
                 <div class="reviews__descr">
                     <div class="reviews__name">Ирина Иванченко</div>
@@ -529,7 +556,7 @@
                     <div class="reviews__thanks">Спасибо, RunSmart!</div>
                 </div>
             </div>
-            <div class="reviews__review">
+            <div class="reviews__review wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
                 <img src="icons/reviews/review2.jpeg" alt="" class="reviews__img">
                 <div class="reviews__descr">
                     <div class="reviews__name">Иван Сёмочкин</div>
@@ -539,7 +566,7 @@
                     <div class="reviews__thanks">С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                 </div>
             </div>
-            <div class="reviews__review">
+            <div class="reviews__review wow fadeInUp" data-wow-duration="1" data-wow-delay="0.5s">
                 <img src="icons/reviews/review3.jpeg" alt="" class="reviews__img">
                 <div class="reviews__descr">
                     <div class="reviews__name">Юлия Дашкина</div>
@@ -552,8 +579,8 @@
         </div>
     </section>
 
-    <section class="footer">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.430481195992!2d37.644807315931104!3d55.76839498055754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sby!4v1578172442844!5m2!1sru!2sby" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <footer>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.430481195992!2d37.644807315931104!3d55.76839498055754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sby!4v1578172442844!5m2!1sru!2sby"></iframe>
         <div class="footer__info">
             <address class="footer__addres">Москва, Мясницкий проезд, д.3с1</address>
             <a class="footer__phone" href="tel:=+84999228974">8 (499) 922-89-74</a>
@@ -563,6 +590,47 @@
                 <a href="#"><div class="footer__print"><span class="icon-pinterest-p"></span></div></a>
             </div>
         </div>
-    </section>
+    </footer>
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течнии 10 минут</div>
+            <form action="#" class="feed-form feed-form_mt25">
+                <input type="text" placeholder="Ваше имя" name="name">
+                <input type="tel" placeholder="Ваш телефон" name="phone">
+                <input type="email" placeholder="Ваш E-mail" name="email">
+                <button class="button button_form">заказать кОНСУЛЬТАЦИЮ</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__descr">Пульсометр модель</div>
+            <form action="#" class="feed-form feed-form_mt25">
+                <input type="text" placeholder="Ваше имя" name="name">
+                <input type="tel" placeholder="Ваш телефон" name="phone">
+                <input type="email" placeholder="Ваш E-mail" name="email">
+                <button class="button button_form">купить</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за ваш заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <a href="#pageUp"><img class="up" src="icons/chevron-up.svg" alt="up"></a>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
